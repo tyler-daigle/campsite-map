@@ -1,0 +1,25 @@
+.button {
+  border: none;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+}
+
+.enabled {
+  color: var(--main-bg-color);
+  background-color: var(--button-color);
+
+}
+
+.button:enabled:active {
+  background-color: var(--active-button-color);
+}
+
+.disabled {
+  color: var(--main-bg-color);
+  background-color: var(--disabled-button-color);
+}

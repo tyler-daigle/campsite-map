@@ -7,7 +7,9 @@
   --main-bg-color: white;
   --secondary-bg-color: #FAFAFA;
 
-  --button-color: #173E33;
+  --button-color: #173e33;
+  --active-button-color: #276b58;
+  --disabled-button-color: rgb(23, 62, 51, .32);
 
   --table-odd-color: rgba(23, 62, 51, .32);
 }
@@ -32,4 +34,13 @@ a:hover {
 
 a:visited {
   color: var(--secondary-text-color);
+}
+
+h1 {
+  color: var(--secondary-text-color);
+  border-bottom: solid 1px var(--secondary-text-color);
+}
+
+h2 {
+  font-size: 1.25rem;
 }

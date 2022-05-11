@@ -14,20 +14,22 @@ export default function Home() {
         <title>Woodland Acres Campsite Selector</title>
       </Head>
 
+      <Navbar />
       <Container>
-        <Navbar />
 
         <main>
           <h1>Reserve Your Campsite</h1>
           <h2>Choose Your Campsite Features</h2>
 
-          <CampsiteSelector />
+          <form>
+            <CampsiteSelector />
 
-          <h3>Available Sites</h3>
+            <h3>Available Sites</h3>
 
-          <AvailableSites />
+            <AvailableSites />
 
-          <Button text="Continue With Reservation" />
+            <Button text="Continue With Reservation" />
+          </form>
         </main>
       </Container>
     </>

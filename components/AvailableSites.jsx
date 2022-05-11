@@ -1,7 +1,9 @@
+import SecondaryContainer from "./SecondaryContainer";
+
 export default function AvailableSites() {
   return (
-    <div>
-      <p>Available Sites</p>
-    </div>
+    <SecondaryContainer>
+      <p style={{ height: "5rem", padding: "1rem" }}>Available Sites</p>
+    </SecondaryContainer>
   );
 }
