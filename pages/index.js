@@ -7,7 +7,19 @@ import CampsiteSelector from '../components/CampsiteSelector';
 import AvailableSites from '../components/AvailableSites';
 import Navbar from '../components/Navbar';
 
+import { useState } from "react";
+
 export default function Home() {
+  const [campsiteChoices, setCampsiteChoices] = useState([
+    { id: 0, text: "Full Hookup" },
+    { id: 1, text: "Water, Electric, Sewer" },
+    { id: 2, text: "Riverfront - Water, Electric" },
+    { id: 3, text: "Water, Electric" },
+    { id: 4, text: "No Hookup" },
+  ]);
+
+  const [selectedCampsiteChoice, setSelectedCampsiteChoice] = useState(2);
+
   return (
     <>
       <Head>
@@ -22,7 +34,7 @@ export default function Home() {
           <h2>Choose Your Campsite Features</h2>
 
           <form>
-            <CampsiteSelector />
+            <CampsiteSelector onSelectionChange={setSelectedCampsiteChoice} choices={campsiteChoices} selectedIndex={selectedCampsiteChoice} />
 
             <h3>Available Sites</h3>
 
