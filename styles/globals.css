@@ -10,7 +10,6 @@
   --button-color: #173E33;
 
   --table-odd-color: rgba(23, 62, 51, .32);
-
 }
 
 * {
@@ -20,4 +19,17 @@
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+a:visited {
+  color: var(--secondary-text-color);
 }
