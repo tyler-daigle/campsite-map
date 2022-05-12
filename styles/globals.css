@@ -11,7 +11,7 @@
   --active-button-color: #276b58;
   --disabled-button-color: rgb(23, 62, 51, .32);
 
-  --table-odd-color: rgba(23, 62, 51, .32);
+  --table-even-color: rgba(23, 62, 51, .32);
 }
 
 * {
@@ -39,8 +39,10 @@ a:visited {
 h1 {
   color: var(--secondary-text-color);
   border-bottom: solid 1px var(--secondary-text-color);
+  margin: 2rem 0;
 }
 
 h2 {
   font-size: 1.25rem;
+  margin: 2rem 0;
 }

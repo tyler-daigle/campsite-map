@@ -7,7 +7,7 @@ export default function CampsiteSelector({ choices, selectedIndex, onSelectionCh
       <SecondaryContainer>
         <fieldset className={styles.campsiteChoiceContainer}>
           {choices.map(choice => {
-            return <CampsiteOption onSelectionChange={onSelectionChange} name="campsite-option" optionId={choice.id} optionValue={choice.type} checked={choice.id === selectedIndex} labelText={choice.text} />
+            return <CampsiteOption key={choice.id} onSelectionChange={onSelectionChange} name="campsite-option" optionId={choice.id} optionValue={choice.type} checked={choice.id === selectedIndex} labelText={choice.text} />;
           })}
         </fieldset>
       </SecondaryContainer>

@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 
 import Container from '../components/Container';
 import Button from '../components/Button';
@@ -8,9 +8,14 @@ import AvailableSites from '../components/AvailableSites';
 import Navbar from '../components/Navbar';
 import CampsiteTypes from "../common/campsiteTypes";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+
+  useEffect(() => {
+    updateSelectedCampsiteChoice(0);
+  }, []);
+
   const [campsiteChoices, setCampsiteChoices] = useState([
     { id: 0, text: "Full Hookup", type: CampsiteTypes.FULL_HOOKUP },
     { id: 1, text: "Water, Electric, Sewer", type: CampsiteTypes.WATER_ELECTRIC_SEWER },

@@ -1,0 +1,41 @@
+.campsitesTable {
+  width: 100%;
+
+  border: none;
+  border-collapse: collapse;
+
+}
+
+
+.campsitesTable td,
+.campsitesTable th {
+  padding: 5px 5px;
+}
+
+.campsitesTable th {
+  color: black;
+  font-weight: bold;
+}
+
+
+
+.campsitesTableData {
+  color: var(--secondary-text-color);
+  text-align: center;
+}
+
+.campsitesTable tr:nth-child(even) td {
+  background-color: var(--table-even-color);
+}
+
+.campsitePrice {
+  font-weight: bold;
+}
+
+.campsiteSelector {
+  display: flex;
+  color: var(--secondary-text-color);
+  justify-content: space-around;
+
+
+}
