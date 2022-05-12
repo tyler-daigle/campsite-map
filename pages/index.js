@@ -20,13 +20,26 @@ export default function Home() {
   ]);
 
   const [selectedCampsiteChoice, setSelectedCampsiteChoice] = useState(1);
+  const [availableSites, setAvailableSites] = useState([]);
 
-  const updateSelectedCampsiteChoice = (campsiteChoiceId) => {
+  const updateSelectedCampsiteChoice = async (campsiteChoiceId) => {
     const campsiteType = campsiteChoices[campsiteChoiceId].type;
     setSelectedCampsiteChoice(campsiteChoiceId);
-    console.log(campsiteType);
 
-  }
+    const query = new URLSearchParams({
+      campsite_type: campsiteType
+    });
+
+    try {
+      const res = await fetch("http://localhost:3000/api/campsites?" + query.toString());
+      const campsites = await res.json();
+      setAvailableSites(campsites);
+    } catch (e) {
+      console.log("Error");
+      console.log(e);
+    }
+  };
+
   return (
     <>
       <Head>
@@ -45,7 +58,7 @@ export default function Home() {
 
             <h3>Available Sites</h3>
 
-            <AvailableSites />
+            <AvailableSites sites={availableSites} />
 
             <Button text="Continue With Reservation" />
           </form>
